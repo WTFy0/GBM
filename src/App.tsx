@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
-
 import ScrollToTop from './components/UI/ScrollToTop';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
