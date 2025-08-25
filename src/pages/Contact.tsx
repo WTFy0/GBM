@@ -216,14 +216,16 @@ const Contact: React.FC = () => {
     >
       {/* Google Maps Embed */}
       
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d431.98373948499255!2d31.33678172291481!3d29.98316825851976!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1756125817282!5m2!1sen!2seg"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        allowFullScreen={true}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <iframe
+  src="https://www.google.com/maps?q=29.98316825851976,31.33678172291481&hl=en&z=16&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen={true}
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
+
 
       {/* Location Details Overlay */}
       <motion.div
