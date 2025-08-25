@@ -188,79 +188,81 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              {t('موقعنا', 'Our Location')}
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t(
-                'يقع مقرنا الرئيسي في موقع استراتيجي بالقاهرة لخدمة عملائنا بسهولة',
-                'Our main office is strategically located in Cairo to serve our clients easily'
-              )}
-            </p>
-          </motion.div>
+{/* Map Section */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <motion.div
+      className="text-center mb-16"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        {t('موقعنا', 'Our Location')}
+      </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        {t(
+          'يقع مقرنا الرئيسي في موقع استراتيجي بالقاهرة لخدمة عملائنا بسهولة',
+          'Our main office is strategically located in Cairo to serve our clients easily'
+        )}
+      </p>
+    </motion.div>
 
-          <motion.div
-            className="relative rounded-2xl overflow-hidden shadow-2xl"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="relative h-96 bg-gradient-to-br from-purple-100 to-blue-100">
-              {/* Interactive Map Placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
-                    <MapPin className="text-white" size={32} />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    {t('موقعنا على الخريطة', 'Our Location on Map')}
-                  </h3>
-                  <div className="bg-white p-4 rounded-lg shadow-md max-w-md mx-auto">
-                    <p className="text-gray-700 font-medium mb-2">
-                      {t('العنوان الكامل:', 'Full Address:')}
-                    </p>
-                    <p className="text-gray-600 leading-relaxed">
-                      {t(
-                        '21 أبراج الفرسان، الطريق الدائري المقطم، برج صفينة، شقة 706، القاهرة، مصر',
-                        '21 Al Forsan Towers, Ring Road Al Mokattam, Safina Tower, Apartment 706, Cairo, Egypt'
-                      )}
-                    </p>
-                  </div>
-                  <button className="mt-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                    {t('فتح في خرائط جوجل', 'Open in Google Maps')}
-                  </button>
-                </div>
-              </div>
-              
-              {/* Location Details Overlay */}
-              <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg max-w-xs"
-                    >
-                      <div className="flex items-center mb-2">
-                        <MapPin className="text-purple-600 mr-2" size={20} />
-                        <span className="font-semibold text-gray-900">
-                          {t('المقطم، القاهرة', 'Al Mokattam, Cairo')}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-600">
-                        {t('موقع استراتيجي في قلب القاهرة', 'Strategic location in the heart of Cairo')}
-                      </p>
-                    </motion.div>
+    <motion.div
+      className="relative rounded-2xl overflow-hidden shadow-2xl"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <div className="relative h-96 bg-gradient-to-br from-purple-100 to-blue-100">
+        {/* Interactive Map Placeholder */}
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50">
+          <div className="text-center p-8">
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+              <MapPin className="text-white" size={32} />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              {t('موقعنا على الخريطة', 'Our Location on Map')}
+            </h3>
+            <div className="bg-white p-4 rounded-lg shadow-md max-w-md mx-auto">
+              <p className="text-gray-700 font-medium mb-2">
+                {t('العنوان الكامل:', 'Full Address:')}
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                {t(
+                  '21 أبراج الفرسان، الطريق الدائري المقطم، برج صفينة، شقة 706، القاهرة، مصر',
+                  '21 Al Forsan Towers, Ring Road Al Mokattam, Safina Tower, Apartment 706, Cairo, Egypt'
+                )}
+              </p>
+            </div>
+            <button className="mt-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+              {t('فتح في خرائط جوجل', 'Open in Google Maps')}
+            </button>
+          </div>
+        </div>
 
-      
+        {/* Location Details Overlay */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg max-w-xs"
+        >
+          <div className="flex items-center mb-2">
+            <MapPin className="text-purple-600 mr-2" size={20} />
+            <span className="font-semibold text-gray-900">
+              {t('المقطم، القاهرة', 'Al Mokattam, Cairo')}
+            </span>
+          </div>
+          <p className="text-sm text-gray-600">
+            {t('موقع استراتيجي في قلب القاهرة', 'Strategic location in the heart of Cairo')}
+          </p>
+        </motion.div>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
