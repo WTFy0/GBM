@@ -4,6 +4,7 @@ import { Language } from '../types';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
+  toggleLanguage: () => void;
   t: (ar: string, en: string) => string;
 }
 
@@ -25,6 +26,10 @@ export const useLanguage = () => {
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(languages[0]);
 
+  const toggleLanguage = () => {
+    setLanguage(current => current.code === 'ar' ? languages[1] : languages[0]);
+  };
+
   const t = (ar: string, en: string) => {
     return language.code === 'ar' ? ar : en;
   };
@@ -35,7 +40,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, [language]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -167,13 +167,13 @@ const About: React.FC = () => {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-600 to-blue-600"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-600 to-blue-600 hidden md:block"></div>
 
             {milestones.map((milestone, index) => (
               <motion.div
                 key={index}
                 className={`flex items-center mb-16 ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  index % 2 === 0 ? 'md:flex-row flex-col' : 'md:flex-row-reverse flex-col'
                 }`}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -183,7 +183,7 @@ const About: React.FC = () => {
                 <div className="flex-1">
                   <div
                     className={`bg-white p-8 rounded-2xl shadow-lg max-w-md ${
-                      index % 2 === 0 ? 'ml-auto mr-8' : 'mr-auto ml-8'
+                      index % 2 === 0 ? 'md:ml-auto md:mr-8 mx-auto' : 'md:mr-auto md:ml-8 mx-auto'
                     }`}
                   >
                     <div className="text-3xl font-bold text-purple-600 mb-2">
@@ -199,7 +199,7 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Timeline Point */}
-                <div className="w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-lg relative z-10"></div>
+                <div className="w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-lg relative z-10 mx-auto md:mx-0 my-4 md:my-0"></div>
               </motion.div>
             ))}
           </div>

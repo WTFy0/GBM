@@ -329,7 +329,7 @@ const Services: React.FC = () => {
                 
                 {/* Connector Line */}
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 transform -translate-y-1/2 z-0"></div>
+                  <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-purple-300 to-blue-300 transform -translate-y-1/2 z-0" style={{ left: '60%', width: '80%' }}></div>
                 )}
 
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
