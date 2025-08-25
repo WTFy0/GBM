@@ -249,6 +249,7 @@ const Contact: React.FC = () => {
                   <span className="font-semibold text-gray-900">
                     {t('المقطم، القاهرة', 'Al Mokattam, Cairo')}
                   </span>
+               </motion.div>
                 </div>
                 <p className="text-sm text-gray-600">
                   {t('موقع استراتيجي في قلب القاهرة', 'Strategic location in the heart of Cairo')}
