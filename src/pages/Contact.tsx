@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 import ContactForm from '../components/UI/ContactForm';
 import { useLanguage } from '../contexts/LanguageContext';
+import MapSection from "../components/MapSection";
 import MapSection from "../components/UI/MapSection";
 
 const Contact: React.FC = () => {
