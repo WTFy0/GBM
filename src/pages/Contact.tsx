@@ -187,7 +187,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-
+<div>
 {/* Map Section */}
 <section className="py-20 bg-white">
   <div className="container mx-auto px-4">
