@@ -260,7 +260,7 @@ const Contact: React.FC = () => {
                       </p>
                     </motion.div>
 
-      
+      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
@@ -323,7 +323,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    
   );
 };
 
