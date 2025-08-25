@@ -243,20 +243,23 @@ const Contact: React.FC = () => {
               </div>
               
               {/* Location Details Overlay */}
-              <div className="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg max-w-xs">
-                <div className="flex items-center mb-2">
-                  <MapPin className="text-purple-600 mr-2" size={20} />
-                  <span className="font-semibold text-gray-900">
-                    {t('المقطم، القاهرة', 'Al Mokattam, Cairo')}
-                  </span>
-               </motion.div>
-                </div>
-                <p className="text-sm text-gray-600">
-                  {t('موقع استراتيجي في قلب القاهرة', 'Strategic location in the heart of Cairo')}
-                </p>
-            </div>
-          </motion.div>
-        </div>
+              <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  className="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg max-w-xs"
+>
+  <div className="flex items-center mb-2">
+    <MapPin className="text-purple-600 mr-2" size={20} />
+    <span className="font-semibold text-gray-900">
+      {t('المقطم، القاهرة', 'Al Mokattam, Cairo')}
+    </span>
+  </div>
+  <p className="text-sm text-gray-600">
+    {t('موقع استراتيجي في قلب القاهرة', 'Strategic location in the heart of Cairo')}
+  </p>
+</motion.div>
+
       </section>
 
       {/* FAQ Section */}
